@@ -20,9 +20,10 @@ export async function SubscriptionCheck({
 
     const isSubscribed = await checkUserSubscription(user?.id!);
 
-    if (!isSubscribed) {
-        redirect(redirectTo);
-    }
+    //temp
+    // if (!isSubscribed) {
+    //     redirect(redirectTo);
+    // }
 
     return <>{children}</>;
 }
