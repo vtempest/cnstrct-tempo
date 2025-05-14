@@ -16,10 +16,10 @@ const templates: Record<string, string> = {
         <th>Description</th><th>Amount</th>
       </tr>
       <tr>
-        <td>{{item_description}}</td><td>${{amount}}</td>
+        <td>{{item_description}}</td><td>{{amount}} </td>
       </tr>
     </table>
-    <p><strong>Total Due: ${{amount}}</strong></p>
+    <p><strong>Total Due: {{amount}}</strong></p>
     <p>Due Date: {{due_date}}</p>
     <p>Best regards,<br>Your Company</p>
   `,
@@ -65,7 +65,7 @@ const handler = async (req: Request): Promise<Response> => {
 
     // Send email via Resend API
     const emailData: any = {
-      from: 'billing@yourcompany.com',
+      from: 'support@updates.cnstrctnetwork.com',
       to: payload.to,
       subject: payload.subject,
       html,
